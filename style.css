@@ -1,0 +1,112 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #01345b;
+}
+
+.instructions {
+  margin: 0px;
+}
+/* Overall website */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  height: 100vh;
+  background-color: white;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
+/* Input box styles */
+.inputContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  --x: 1px;
+  --y: 2px;
+}
+
+input {
+  outline: none;
+  width: 400px;
+  /* padding: 2%; */
+  height: auto;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+label {
+  position: absolute;
+  color: black;
+  left: var(--x);
+  top: var(--y);
+  border: 1px solid white;
+  /* background-color: red; */
+  border: none;
+  padding: 0px 5px 0px 5px;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  left: calc(var(--x) - 4px);
+  top: calc(var(--y) * -6);
+  font-size: 12px;
+  transition: ease 0.5s;
+}
+
+button {
+  justify-content: center;
+  align-self: center;
+  padding: 12px 18px;
+  border-radius: 25px;
+  margin: 5%;
+}
+
+.weatherInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.countryName {
+  text-align: center;
+  margin: 0px;
+}
+.countryTime {
+  text-align: center;
+  margin: 0px;
+}
+
+.weatherInfoPanel {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.info {
+  margin: 2% 2%;
+}

@@ -58,13 +58,6 @@ input {
   outline: none;
 }
 
-input:focus + label,
-label:focus-within {
-  top: calc(var(--y) * -6);
-  font-size: 12px;
-  transition: ease 0.5s;
-}
-
 label {
   position: absolute;
   color: black;
@@ -75,7 +68,12 @@ label {
   border: none;
   padding: 0px 5px 0px 5px;
 }
-
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: calc(var(--y) * -6);
+  font-size: 12px;
+  transition: ease 0.5s;
+}
 button {
   justify-content: center;
   align-self: center;

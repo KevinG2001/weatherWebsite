@@ -21,6 +21,7 @@ html {
 .wrapper {
   height: 100vh;
   background-color: white;
+  width: 800px;
 }
 
 .box {
@@ -42,7 +43,7 @@ html {
   position: relative;
   display: flex;
   flex-direction: column;
-  --x: 1px;
+  --x: -4px;
   --y: 2px;
 }
 
@@ -53,8 +54,15 @@ input {
   height: auto;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid gray;
   outline: none;
+}
+
+input:focus + label,
+label:focus-within {
+  top: calc(var(--y) * -6);
+  font-size: 12px;
+  transition: ease 0.5s;
 }
 
 label {
@@ -66,14 +74,6 @@ label {
   /* background-color: red; */
   border: none;
   padding: 0px 5px 0px 5px;
-}
-
-input:focus ~ label,
-input:not(:placeholder-shown) ~ label {
-  left: calc(var(--x) - 4px);
-  top: calc(var(--y) * -6);
-  font-size: 12px;
-  transition: ease 0.5s;
 }
 
 button {

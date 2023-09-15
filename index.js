@@ -19,13 +19,23 @@ function searchLocation() {
       <div class="weatherInfo">
         <div class="weatherInfoPanel">
           <p class="info">Average Temp: ${today.avgtemp_c}</p>
-          <p class="info">Wind: ${data.current.wind_kph}kph</p>
         </div>
         <div class="weatherInfoPanel">
-          <p class="info">Max Temp: ${today.maxtemp_c}°C</p>
-          <p class="info">Max Wind: ${today.maxwind_kph}kph</p>
-          <p class="info">Humidity: ${data.current.humidity}</p>
-          <p class="info">Min Temp: ${today.mintemp_c}°C</p>
+          <div class="stack">
+            <p class="info">H: ${today.maxtemp_c}°C</p> 
+            <p class="info">L: ${today.mintemp_c}°C</p>
+          </div>
+          <div class="stack">
+            <p class="info">
+              <img src="../assets/wind-solid.svg" alt="SVG Image">
+              Wind: ${data.current.wind_kph}kph
+            </p>
+            <p class="info">
+              <img src="../assets/droplet-solid .svg" alt="SVG Image">
+              Humidity: ${data.current.humidity}%
+            </p>
+          </div>
+          
         </div>
     </div>
   `;

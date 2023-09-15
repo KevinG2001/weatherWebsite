@@ -21,7 +21,6 @@ html {
 .wrapper {
   height: 100vh;
   background-color: white;
-  width: 800px;
 }
 
 .box {
@@ -43,7 +42,7 @@ html {
   position: relative;
   display: flex;
   flex-direction: column;
-  --x: -4px;
+  --x: 1px;
   --y: 2px;
 }
 
@@ -54,7 +53,7 @@ input {
   height: auto;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid white;
   outline: none;
 }
 
@@ -68,12 +67,15 @@ label {
   border: none;
   padding: 0px 5px 0px 5px;
 }
+
 input:focus ~ label,
 input:not(:placeholder-shown) ~ label {
+  left: calc(var(--x) - 4px);
   top: calc(var(--y) * -6);
   font-size: 12px;
   transition: ease 0.5s;
 }
+
 button {
   justify-content: center;
   align-self: center;
@@ -82,12 +84,15 @@ button {
   margin: 5%;
 }
 
+.currentWeather {
+  height: 400px;
+}
 .weatherInfo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 125px;
 }
 .countryName {
   text-align: center;
@@ -100,11 +105,28 @@ button {
 
 .weatherInfoPanel {
   width: 400px;
+  /* height: 70px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
 .info {
-  margin: 2% 2%;
+  margin: 0;
+  height: 20px;
+  flex: 1;
+  min-height: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+
+img {
+  width: 25px;
+  height: 25px;
 }

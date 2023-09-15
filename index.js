@@ -3,7 +3,7 @@ const apiUrl = "http://api.weatherapi.com/v1";
 
 // Search location function
 function searchLocation() {
-  const searchTerm = document.getElementById("inputBox").value;
+  const searchTerm = document.getElementById("Location").value;
 
   fetch(`${apiUrl}/forecast.json?key=${apiKey}&q=${searchTerm}&days=1`)
     .then((response) => response.json())
@@ -36,7 +36,7 @@ function searchLocation() {
 }
 
 function populateGraph() {
-  const searchTerm = document.getElementById("inputBox").value;
+  const searchTerm = document.getElementById("Location").value;
   fetch(`${apiUrl}/forecast.json?key=${apiKey}&q=${searchTerm}&days=1`)
     .then((response) => response.json())
     .then((data) => {

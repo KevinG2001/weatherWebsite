@@ -19,15 +19,17 @@ html {
 }
 
 .wrapper {
-  height: 100vh;
+  height: 100%;
   background-color: white;
 }
 
 .box {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 5%;
+  margin: 2% 0%;
+  border: 2px solid red;
 }
 
 /* Input box styles */
@@ -93,6 +95,7 @@ button {
   justify-content: center;
   align-items: center;
   height: 125px;
+  width: 100%;
 }
 .countryName {
   text-align: center;
@@ -101,6 +104,33 @@ button {
 .countryTime {
   text-align: center;
   margin: 0px;
+}
+
+.weatherInfoPanelWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.weatherInfoTop {
+  display: flex;
+  flex-direction: row;
+}
+
+.weatherIcon {
+  width: 64px;
+  height: 64px;
+}
+
+.avgTemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.condition {
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .weatherInfoPanel {

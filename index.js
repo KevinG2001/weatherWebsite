@@ -13,12 +13,24 @@ function searchLocation() {
       // Gets the information for currentWeather
       const today = data.forecast.forecastday[0].day;
 
+      //Gets the url of the icon for the weather string
+      //and then gets the number at the end and matchs it with
+      //the number from the assets folder
+      const url = today.condition.icon;
+      const iconNumber = url.match(/\/(\d+)\.png$/)[1];
+
       weatherDataElement.innerHTML = `
       <h2 class="countryName">${data.location.name}, ${data.location.country}</h2>
       <h3 class="countryTime">${data.location.localtime}</h3>
       <div class="weatherInfo">
         <div class="weatherInfoPanel">
-          <p class="info">Average Temp: ${today.avgtemp_c}</p>
+          <div class="weatherInfoPanelWrapper">
+            <div class="weatherInfoTop">
+              <img class="weatherIcon" src="../assets/weatherCodes/${iconNumber}.png"/> 
+              <div class="avgTemp">${today.avgtemp_c}°C</div>
+            </div>
+            <div class="condition">${today.condition.text}</div>          
+          </div>
         </div>
         <div class="weatherInfoPanel">
           <div class="stack">
@@ -31,11 +43,10 @@ function searchLocation() {
               Wind: ${data.current.wind_kph}kph
             </p>
             <p class="info">
-              <img src="../assets/droplet-solid .svg" alt="SVG Image">
+              <img src="../assets/droplet-solid.svg" alt="SVG Image">
               Humidity: ${data.current.humidity}%
             </p>
           </div>
-          
         </div>
     </div>
   `;

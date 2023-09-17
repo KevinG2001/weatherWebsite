@@ -100,8 +100,8 @@ function drawGraph(xValues, yValues) {
         {
           label: "Temperature (°C)",
           data: yValues,
-          backgroundColor: "rgba(75, 192, 192, 0.2)",
-          borderColor: "rgba(75, 192, 192, 1)",
+          backgroundColor: "#01345b",
+          borderColor: "#01345b",
           borderWidth: 1,
         },
       ],

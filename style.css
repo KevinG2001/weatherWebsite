@@ -82,12 +82,38 @@ input:not(:placeholder-shown) ~ label {
   transition: ease 0.5s;
 }
 
-button {
+.searchBtn {
   justify-content: center;
   align-self: center;
+  font-size: 1.2rem;
   padding: 12px 18px;
-  border-radius: 25px;
-  margin: 5%;
+  position: relative;
+  border: 2px solid #01345b;
+  border-radius: 0;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 150ms ease-in-out;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: #01345b;
+    z-index: -1;
+    transition: width 150ms ease-in-out;
+  }
+
+  &:hover {
+    color: #fff;
+    &:after {
+      width: 110%;
+    }
+  }
 }
 
 .currentWeather {

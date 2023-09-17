@@ -34,8 +34,14 @@ function searchLocation() {
         </div>
         <div class="weatherInfoPanel">
           <div class="stack">
-            <p class="info">H: ${today.maxtemp_c}°C</p> 
-            <p class="info">L: ${today.mintemp_c}°C</p>
+            <div class="info">
+              <img src="../assets/temperature-arrow-up-solid.svg"/>
+              ${today.maxtemp_c}°C
+            </div> 
+            <div class="info">
+              <img src="../assets/temperature-arrow-down-solid.svg"/>
+              ${today.mintemp_c}°C
+            </div>
           </div>
           <div class="stack">
             <p class="info">

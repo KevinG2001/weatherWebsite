@@ -16,10 +16,11 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .wrapper {
-  height: 100%;
+  height: auto;
   background-color: white;
 }
 
@@ -29,7 +30,7 @@ html {
   justify-content: center;
   align-items: center;
   margin: 2% 0%;
-  border: 2px solid red;
+  padding: 1%;
 }
 
 /* Input box styles */
@@ -44,7 +45,7 @@ html {
   position: relative;
   display: flex;
   flex-direction: column;
-  --x: 1px;
+  --x: -1px;
   --y: 2px;
 }
 
@@ -57,6 +58,10 @@ input {
   border: none;
   border-bottom: 2px solid white;
   outline: none;
+}
+
+input:hover {
+  border-bottom: 1px solid gray;
 }
 
 label {
@@ -72,7 +77,6 @@ label {
 
 input:focus ~ label,
 input:not(:placeholder-shown) ~ label {
-  left: calc(var(--x) - 4px);
   top: calc(var(--y) * -6);
   font-size: 12px;
   transition: ease 0.5s;
@@ -151,7 +155,6 @@ button {
   height: 25px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-self: center;
   text-align: center;
 }

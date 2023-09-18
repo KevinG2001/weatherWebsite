@@ -7,9 +7,6 @@ html {
   background-color: #01345b;
 }
 
-.instructions {
-  margin: 0px;
-}
 /* Overall website */
 .container {
   display: flex;
@@ -20,8 +17,9 @@ html {
 }
 
 .wrapper {
-  height: auto;
+  height: 100%;
   background-color: white;
+  width: 80%;
 }
 
 .box {

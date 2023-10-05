@@ -1,4 +1,4 @@
-const apiKey = "76be7e38f753474ebf414147231109";
+const apiKey = "f6ac7298bd70410fa5b195359230510";
 const apiUrl = "http://api.weatherapi.com/v1";
 
 // Search location function

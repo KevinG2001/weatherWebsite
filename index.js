@@ -39,17 +39,17 @@ function searchLocation() {
               ${today.maxtemp_c}°C
             </div> 
             <div class="info">
-              <img src="/assets/temperature-arrow-down-solid.svg"/>
+              <img src="./assets/temperature-arrow-down-solid.svg"/>
               ${today.mintemp_c}°C
             </div>
           </div>
           <div class="stack">
             <p class="info">
-              <img src="/assets/wind-solid.svg" alt="SVG Image">
+              <img src="./assets/wind-solid.svg" alt="SVG Image">
               Wind: ${data.current.wind_kph}kph
             </p>
             <p class="info">
-              <img src="/assets/droplet-solid.svg" alt="SVG Image">
+              <img src="./assets/droplet-solid.svg" alt="SVG Image">
               Humidity: ${data.current.humidity}%
             </p>
           </div>

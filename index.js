@@ -26,7 +26,7 @@ function searchLocation() {
         <div class="weatherInfoPanel">
           <div class="weatherInfoPanelWrapper">
             <div class="weatherInfoTop">
-              <img class="weatherIcon" src="/assets/weatherCodes/${iconNumber}.png"/> 
+              <img class="weatherIcon" src="assets/weatherCodes/${iconNumber}.png"/> 
               <div class="avgTemp">${today.avgtemp_c}°C</div>
             </div>
             <div class="condition">${today.condition.text}</div>          
@@ -35,7 +35,7 @@ function searchLocation() {
         <div class="weatherInfoPanel">
           <div class="stack">
             <div class="info">
-              <img src="/assets/temperature-arrow-up-solid.svg"/>
+              <img src="assets/temperature-arrow-up-solid.svg"/>
               ${today.maxtemp_c}°C
             </div> 
             <div class="info">

@@ -58,7 +58,7 @@ function searchLocation() {
   `;
     })
     .catch((error) => {
-      console.error("Error:", error);
+      console.error("Error fetching weather data:", error);
     });
 }
 
